@@ -7,6 +7,8 @@ $(function() {
     var $navBar = $('nav'),
         $coverVideo = $('#cover-video'),
         $downloadButton = $('#button-download'),
+        $whatisabetaLink = $('#whatisabeta-link'),
+        $warningDialogBeta = $('<a>').html($('#whatisabeta-content').html());
         $warningDialog = $('<div>').html($('#warning-dialog-content').html());
 
     $(document).on('click', function(e) {
@@ -19,6 +21,10 @@ $(function() {
 
     $downloadButton.on('click', function() {
         $warningDialog.modal();
+    });
+
+    $whatisabetaLink.on('click', function() {
+        $warningDialogBeta.modal();
     });
 
     $coverVideo.on('click', function() {
